@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		6A2FB0362768FA8E001A713B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2FB0342768FA8E001A713B /* Main.storyboard */; };
 		6A2FB0382768FA92001A713B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A2FB0372768FA92001A713B /* Assets.xcassets */; };
 		6A2FB03B2768FA92001A713B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2FB0392768FA92001A713B /* LaunchScreen.storyboard */; };
+		6AF8E99A2768FDFF006C2EC3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF8E9992768FDFF006C2EC3 /* WelcomeView.swift */; };
 		CB9BC137340DB418A558EAE8 /* Pods_11thWeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E27897E898A9DEF416B3F /* Pods_11thWeek.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		6A2FB0372768FA92001A713B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A2FB03A2768FA92001A713B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A2FB03C2768FA92001A713B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF8E9992768FDFF006C2EC3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D6FC606CE264CB0CCF2CF5BA /* Pods-11thWeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11thWeek.release.xcconfig"; path = "Target Support Files/Pods-11thWeek/Pods-11thWeek.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,15 +82,40 @@
 		6A2FB02D2768FA8E001A713B /* 11thWeek */ = {
 			isa = PBXGroup;
 			children = (
+				6AF8E9982768FDC5006C2EC3 /* Controller */,
+				6AF8E9972768FDBF006C2EC3 /* View */,
+				6AF8E9962768FDB9006C2EC3 /* Model */,
 				6A2FB02E2768FA8E001A713B /* AppDelegate.swift */,
 				6A2FB0302768FA8E001A713B /* SceneDelegate.swift */,
-				6A2FB0322768FA8E001A713B /* ViewController.swift */,
 				6A2FB0342768FA8E001A713B /* Main.storyboard */,
 				6A2FB0372768FA92001A713B /* Assets.xcassets */,
 				6A2FB0392768FA92001A713B /* LaunchScreen.storyboard */,
 				6A2FB03C2768FA92001A713B /* Info.plist */,
 			);
 			path = 11thWeek;
+			sourceTree = "<group>";
+		};
+		6AF8E9962768FDB9006C2EC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6AF8E9972768FDBF006C2EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6AF8E9992768FDFF006C2EC3 /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6AF8E9982768FDC5006C2EC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A2FB0322768FA8E001A713B /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +130,7 @@
 				6A2FB0272768FA8E001A713B /* Sources */,
 				6A2FB0282768FA8E001A713B /* Frameworks */,
 				6A2FB0292768FA8E001A713B /* Resources */,
+				335B0C8E4BC6ED498EFA4F43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +187,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		335B0C8E4BC6ED498EFA4F43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-11thWeek/Pods-11thWeek-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-11thWeek/Pods-11thWeek-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-11thWeek/Pods-11thWeek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6019420D1913A4955C01BAC0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +254,7 @@
 				6A2FB0332768FA8E001A713B /* ViewController.swift in Sources */,
 				6A2FB02F2768FA8E001A713B /* AppDelegate.swift in Sources */,
 				6A2FB0312768FA8E001A713B /* SceneDelegate.swift in Sources */,
+				6AF8E99A2768FDFF006C2EC3 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
