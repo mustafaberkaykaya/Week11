@@ -20,7 +20,17 @@ class ViewController: UIViewController, WelcomeViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-      
+        if defaults.bool(forKey: "FirstLaunch") == true {
+            print("Second+")
+            
+            defaults.setValue(true, forKey: "FirstLaunch")
+        } else {
+            print("First")
+            addSubViews()
+            defaults.setValue(true, forKey: "FirstLaunch")
+        }
+
+        welcomeView.delagate = self
     }
 }
 
