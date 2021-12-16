@@ -28,19 +28,16 @@ class WelcomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureContents()
-        
     }
     
     private func configureContents() {
         addSubViews()
         titleLabel.text = "Welcome to 11th of Week"
         button.setTitle("Ok", for: .normal)
-        
     }
 }
 
 extension WelcomeView {
-    
     private func addSubViews() {
         addTittle()
         addButton()
@@ -59,7 +56,6 @@ extension WelcomeView {
         button.horizontalToSuperview()
         button.bottomToSuperview()
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        
     }
     
     @objc

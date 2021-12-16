@@ -18,19 +18,17 @@ class ViewController: UIViewController, WelcomeViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        welcomeView.delagate = self
         
         if defaults.bool(forKey: "FirstLaunch") == true {
             print("Second+")
-            
             defaults.setValue(true, forKey: "FirstLaunch")
         } else {
             print("First")
             addSubViews()
             defaults.setValue(true, forKey: "FirstLaunch")
         }
-
-        welcomeView.delagate = self
     }
 }
 
@@ -43,5 +41,4 @@ extension ViewController {
     func didTapEnableButton() {
         print("Tetiklendi")
     }
-    
 }
